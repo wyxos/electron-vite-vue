@@ -4,7 +4,6 @@ import resolve from 'vite-plugin-resolve'
 import electron from 'vite-plugin-electron-renderer'
 import pkg from '../../package.json'
 
-// https://vitejs.dev/config/
 export default defineConfig({
     mode: process.env.NODE_ENV,
     root: __dirname,
@@ -13,9 +12,8 @@ export default defineConfig({
         electron(),
         resolve(
             /**
-             * Here you can specify other modules
-             * 🚧 You have to make sure that your module is in `dependencies` and not in the` devDependencies`,
-             *    which will ensure that the electron-builder can package it correctly
+             * Specify other modules
+             * The module must be in `dependencies` and not in the` devDependencies`
              */
             {
                 // If you use electron-store, this will work
