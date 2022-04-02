@@ -1,5 +1,3 @@
-import {execSync} from "child_process";
-
 (async function(){
     const { execSync } = require('child_process')
     const prompt = require('prompt')
