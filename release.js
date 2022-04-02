@@ -1,6 +1,7 @@
 (async function(){
     const { execSync } = require('child_process')
     const prompt = require('prompt')
+    const fs = require('fs')
 
     require('dotenv').config()
 
