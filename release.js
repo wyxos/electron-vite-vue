@@ -24,13 +24,15 @@
 
     json.version = version
 
-    fs.writeFileSync('./package.json', JSON.stringify(json))
+    fs.writeFileSync('./package.json', JSON.stringify(json, null, 2))
 
     execSync('git add .')
     console.log('Files staged.')
 
-    execSync(`git commit -m "feat: release ${version}"`)
-    console.log('Files committed.')
+    const message = "feat: release ${version}";
+
+    execSync(`git commit -m ${message}`)
+    console.log(`Commit with message: ${message}`)
 
     execSync(`cross-env GH_TOKEN=${token} electron-builder -- -p always`, {stdio: 'inherit'})
 }())
