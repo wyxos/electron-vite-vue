@@ -9,6 +9,7 @@
     "dev": "node scripts/watch.mjs",
     "prebuild": "node scripts/build.mjs",
     "build": "electron-builder",
+    "release": "electron-builder -- -p always",
     "ui:dev": "vite",
     "ui:build": "vite build",
     "preview": "vite preview"

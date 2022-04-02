@@ -29,5 +29,13 @@
     "perMachine": false,
     "allowToChangeInstallationDirectory": true,
     "deleteAppDataOnUninstall": false
-  }
+  },
+  "publish": [
+    {
+      "provider": "github",
+      "repo": "repo-name",
+      "owner": "repo-user",
+      "releaseType": "release"
+    }
+  ]
 }
