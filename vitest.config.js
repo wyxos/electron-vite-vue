@@ -6,7 +6,6 @@ export default defineConfig({
     Vue()
   ],
   test: {
-    globals: true,
     environment: 'jsdom'
   }
 })
