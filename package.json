@@ -12,7 +12,8 @@
     "release": "node release.js",
     "ui:dev": "vite",
     "ui:build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --fix --ext .js,.vue"
   },
   "engines": {
     "node": ">=14.17.0"

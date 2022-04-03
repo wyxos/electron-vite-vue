@@ -9,7 +9,7 @@ export default defineConfig({
     lib: {
       entry: 'index.js',
       formats: ['cjs'],
-      fileName: () => '[name].cjs',
+      fileName: () => '[name].cjs'
     },
     minify: process.env.NODE_ENV === 'production',
     sourcemap: true,
@@ -17,8 +17,8 @@ export default defineConfig({
       external: [
         'electron',
         ...builtinModules,
-        ...Object.keys(pkg.dependencies || {}),
-      ],
-    },
-  },
+        ...Object.keys(pkg.dependencies || {})
+      ]
+    }
+  }
 })
