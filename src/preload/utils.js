@@ -1,6 +1,6 @@
 
 /** docoment ready */
-export function domReady(condition = ['complete', 'interactive']) {
+export default function domReady(condition = ['complete', 'interactive']) {
   return new Promise(resolve => {
     if (condition.includes(document.readyState)) {
       resolve(true)
