@@ -4,12 +4,12 @@
 # vendor
 node_modules
 
-# folder
-
-
-# file
-
 # build
+coverage
 dist
 release
+
+# folder
+
+# file
 .env
