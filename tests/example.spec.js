@@ -1,7 +1,5 @@
-import { assert, describe, it } from 'vitest'
-
 describe('Example test', () => {
-  it('should sum 2 and 2', function () {
-    assert.equal(2 + 2, 4)
+  it('should sum 2 + 2', function () {
+    expect(2 + 2).toBe(4)
   })
 })
