@@ -2,6 +2,7 @@ import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import resolve from 'vite-plugin-resolve'
 import electron from 'vite-plugin-electron-renderer'
+import eslintPlugin from 'vite-plugin-eslint';
 import pkg from '../../package.json'
 
 export default defineConfig({
@@ -20,6 +21,7 @@ export default defineConfig({
                 'electron-store': 'const Store = require("electron-store"); export default Store;',
             }
         ),
+        eslintPlugin()
     ],
     base: './',
     build: {
