@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-essential',
-    'airbnb-base',
+    'standard',
   ],
   parserOptions: {
     ecmaVersion: 13,
@@ -16,5 +16,7 @@ module.exports = {
     'vue',
   ],
   rules: {
+    'import/no-extraneous-dependencies': 0,
+    'global-require': 0
   },
 };
