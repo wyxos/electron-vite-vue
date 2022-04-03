@@ -6,13 +6,15 @@ describe('Component test', () => {
   it('mount component', async () => {
     expect(Hello).toBeTruthy()
 
+    const msg = 'This is a test message'
+
     const wrapper = mount(Hello, {
       props: {
-        msg: 'This is a test message'
+        msg
       }
     })
 
-    expect(wrapper.text()).toContain('This is a test message')
+    expect(wrapper.text()).toContain(msg)
     expect(wrapper.html()).toMatchSnapshot()
   }, 0)
 })
