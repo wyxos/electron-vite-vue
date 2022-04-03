@@ -13,7 +13,7 @@ if (!app.requestSingleInstanceLock()) {
   process.exit(0)
 }
 // eslint-disable-next-line dot-notation
-process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
+// process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
 
 let win
 
@@ -21,9 +21,9 @@ async function createWindow () {
   win = new BrowserWindow({
     title: 'Main window',
     webPreferences: {
-      preload: join(__dirname, '../preload/index.cjs'),
-      nodeIntegration: true,
-      contextIsolation: false
+      preload: join(__dirname, '../preload/index.cjs')
+      // nodeIntegration: true,
+      // contextIsolation: false
     }
   })
 
