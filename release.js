@@ -29,12 +29,12 @@
 
   fs.writeFileSync('./package.json', JSON.stringify(json, null, 2))
 
-  execSync('git add .')
+  execSync('git add .', { stdio: 'inherit' })
   console.log('Files staged.')
 
   const message = `feat: release ${version}`
 
-  execSync(`git commit -m ${message}`)
+  execSync(`git commit -m ${message}`, { stdio: 'inherit' })
   console.log(`Commit with message: ${message}`)
 
   execSync(`cross-env GH_TOKEN=${token} electron-builder -- -p always`, { stdio: 'inherit' })
