@@ -1,10 +1,9 @@
-(async function release () {
+;(async function release() {
   const { execSync } = require('child_process')
   const prompt = require('prompt')
   const fs = require('fs')
 
-  require('dotenv')
-    .config()
+  require('dotenv').config()
 
   const token = process.env.GH_TOKEN
 
@@ -18,7 +17,7 @@
     properties: {
       version: {
         description: `Enter the version to publish (current ${currentVersion}`,
-        before (value) {
+        before(value) {
           return `v${value}`
         }
       }
@@ -37,5 +36,7 @@
   execSync(`git commit -m ${message}`, { stdio: 'inherit' })
   console.log(`Commit with message: ${message}`)
 
-  execSync(`cross-env GH_TOKEN=${token} electron-builder -- -p always`, { stdio: 'inherit' })
-}())
+  execSync(`cross-env GH_TOKEN=${token} electron-builder -- -p always`, {
+    stdio: 'inherit'
+  })
+})()

@@ -3,7 +3,9 @@ import { release } from 'os'
 import { join } from 'path'
 
 // Disable GPU Acceleration for Windows 7
-if (release().startsWith('6.1')) app.disableHardwareAcceleration()
+if (release().startsWith('6.1')) {
+  app.disableHardwareAcceleration()
+}
 
 // Set application name for Windows 10+ notifications
 if (process.platform === 'win32') app.setAppUserModelId(app.getName())
@@ -17,7 +19,7 @@ if (!app.requestSingleInstanceLock()) {
 
 let win
 
-async function createWindow () {
+async function createWindow() {
   win = new BrowserWindow({
     title: 'Main window',
     webPreferences: {

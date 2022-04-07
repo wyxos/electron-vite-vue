@@ -1,11 +1,11 @@
 <template>
-    <p>Electron App</p>
-    <p>{{ message }}</p>
+  <p>Electron App</p>
+  <p>{{ message }}</p>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       message: 'Hello World!'
     }

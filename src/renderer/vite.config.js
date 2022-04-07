@@ -13,12 +13,13 @@ export default defineConfig({
     electron(),
     resolve(
       /**
-             * Specify other modules
-             * The module must be in `dependencies` and not in the` devDependencies`
-             */
+       * Specify other modules
+       * The module must be in `dependencies` and not in the` devDependencies`
+       */
       {
         // If you use electron-store, this will work
-        'electron-store': 'const Store = require("electron-store"); export default Store;'
+        'electron-store':
+          'const Store = require("electron-store"); export default Store;'
       }
     ),
     eslintPlugin({
