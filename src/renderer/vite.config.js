@@ -4,10 +4,17 @@ import resolve from 'vite-plugin-resolve'
 import electron from 'vite-plugin-electron-renderer'
 import eslintPlugin from 'vite-plugin-eslint'
 import pkg from '../../package.json'
+import path from 'path'
 
 export default defineConfig({
   mode: process.env.NODE_ENV,
   root: __dirname,
+  resolve: {
+    alias: {
+      '@renderer': path.resolve(__dirname, './src'),
+      '@common': path.resolve(__dirname, '../common')
+    }
+  },
   plugins: [
     vue(),
     electron(),

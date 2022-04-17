@@ -1,9 +1,16 @@
 import { builtinModules } from 'module'
 import { defineConfig } from 'vite'
 import pkg from '../../package.json'
+import path from 'path'
 
 export default defineConfig({
   root: __dirname,
+  resolve: {
+    alias: {
+      '@preload': path.resolve(__dirname),
+      '@common': path.resolve(__dirname, '../common')
+    }
+  },
   build: {
     outDir: '../../dist/preload',
     lib: {

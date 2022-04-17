@@ -1,1 +1,8 @@
-Scaffold Electron + Vite + Vue in Javascript
+Scaffold Electron + Vite + Vue
+
+- Javascript
+- Vitest
+- Eslint
+- Prettier
+- Sequelize
+- Electron Builder
