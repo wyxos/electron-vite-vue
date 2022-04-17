@@ -1,3 +1,7 @@
+/**
+ * @vitest-environment jsdom
+ */
+
 import { mount } from '@vue/test-utils'
 import Hello from '../src/renderer/src/components/HelloWorld.vue'
 import { it, expect, describe } from 'vitest'
